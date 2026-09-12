@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { type Registrant } from "../libs/Registrant";
+
 //---- แผนการวิ่ง ----
 const plans = [
   { id: "funrun", label: "Fun run 5.5 Km", price: 500 },
@@ -87,8 +88,6 @@ export default function ModalRegister() {
     <div
       className="modal fade"
       id="modalregister"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
       tabIndex={-1}
       aria-labelledby="modalregisterLabel"
       aria-hidden="true"
