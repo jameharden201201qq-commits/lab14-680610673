@@ -61,16 +61,11 @@ export default function ModalRegister() {
     }
 
     const newRegistrant: Registrant = {
-      id: Date.now().toString(),
-      firstName: firstName.trim(),
-      lastName: lastName.trim(),
-      plan: selectedPlanObj ? selectedPlanObj.label : "",
+      id: Date.now(),
+      fullName: `${firstName.trim()} ${lastName.trim()}`,
       gender,
-      items: selectedItems.map((id) => {
-        const item = extraItems.find((i) => i.id === id);
-        return item ? item.label : "";
-      }),
-      totalPrice: totalPayment,
+      plan: selectedPlanObj ? selectedPlanObj.label : "",
+      total: totalPayment,
     };
 
     const prevList: Registrant[] = JSON.parse(
